@@ -57,7 +57,8 @@ header {
 }
 
 .srch-cart-login a span {
-    margin-top: 5px;
+    margin-top: 10px;
+    font-size: 12px;
 }
 
 .srch, .cart, .login:not(:last-child):after {
@@ -101,4 +102,226 @@ header {
     -ms-transform: translateX(100%);
     -o-transform: translateX(100%);
     transform: translateX(100%);
+}
+
+/* Sections */
+.container {
+    max-width: 1186px;
+    width: 100%;
+    margin: 70px auto;
+}
+
+.big-slider {
+    height: 280px;
+    border-radius: 10px;
+    background-color: #F5AD00;
+    background-image: url(/src/img/pug.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 30%;
+    box-shadow: 0px 0px 30px #F5AD001A;
+
+    position: relative;
+}
+
+.bg-cont {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.bg-cont h2 {
+    color: #FFFFFF;
+    width: 344px;
+}
+
+.bg-slider .absolute-l {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bg-slider .absolute-r {
+    position: absolute;
+    right: 2%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.arrow {
+    height: 40px;
+    width: 40px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 20px #597DBC1A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.arrow:hover {
+    cursor: pointer;
+    opacity: 95%;
+}
+
+.arrow .r {
+    transform: rotate(180deg);
+}
+
+.bg-cont button {
+    height: 45px;
+    width: 135px;
+    background-color: #FFFFFF;
+    color: #111111;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-top: 60px;
+    transition: all 0.3s ease;
+}
+
+.bg-cont button:hover {
+    opacity: 95%;
+}
+
+.small-cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.small-cards .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 90px;
+    max-width: 277px;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.5s ease;
+}
+
+.small-cards .card:hover {
+    filter: grayscale(80%);
+}
+
+.small-cards .card .card-square {
+    height: 44px;
+    width: 44px;
+    border-radius: 6px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 25px;
+}
+
+.small-cards .card .card-cont {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.small-cards .card .card-cont span {
+    width: 152px;
+}
+
+.small-cards .card .card-cont img {
+    height: 16px;
+    width: 16px;
+}
+
+.small-cards .a .card-square {
+    background-color: #E3F0D4;
+}
+
+.small-cards .b .card-square {
+    background-color: #FDDFD2;
+}
+
+.small-cards .c .card-square {
+    background-color: rgb(60, 171, 224, 0.2);
+}
+
+.small-cards .d .card-square {
+    background-color: rgb(205, 150, 209, 0.2);
+}
+
+.small-cards .a .card-cont .card-span {
+    color: #74B42C;
+}
+
+.small-cards .b .card-cont .card-span {
+    color: #F5621F;
+}
+
+.small-cards .c .card-cont .card-span {
+    color: #3CABE0;
+}
+
+.small-cards .d .card-cont .card-span {
+    color: #CC96D0;
+}
+
+.small-cards .a {
+    background-color: #F1F7E9;
+    box-shadow: 0px 30px 15px -15px rgb(117 180 44 / 10%);
+    -webkit-box-shadow: 0px 30px 15px -15px rgb(117 180 44 / 10%);
+}
+
+.small-cards .b {
+    background-color: #FEEFE8;
+    box-shadow: 0px 30px 15px -15px rgb(245 99 31 / 10%);
+    -webkit-box-shadow: 0px 30px 15px -15px rgb(245 99 31 / 10%);
+}
+
+.small-cards .c {
+    background-color: #EBF7FC;
+    box-shadow: 0px 30px 15px -15px rgb(60 172 224 / 10%);
+    -webkit-box-shadow: 0px 30px 15px -15px rgb(60 172 224 / 10%);
+}
+
+.small-cards .d {
+    background-color: #FAF4FA;
+    box-shadow: 0px 30px 15px -15px rgb(204 150 208 / 10%);
+    -webkit-box-shadow: 0px 30px 15px -15px rgb(204 150 208 / 10%);
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 25px 25px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "card-a card-b card-c"
+        "card-a card-d card-d";
+}
+
+.card-a {
+    grid-area: card-a;
+}
+
+.card-b {
+    grid-area: card-b;
+}
+
+.card-c {
+    grid-area: card-c;
+}
+
+.card-d {
+    grid-area: card-d;
 }
