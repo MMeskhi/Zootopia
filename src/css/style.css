@@ -115,7 +115,7 @@ header {
     height: 280px;
     border-radius: 10px;
     background-color: #F5AD00;
-    background-image: url(/src/img/pug.png);
+    background-image: url(../img/pug.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: 30%;
@@ -312,16 +312,57 @@ header {
 
 .card-a {
     grid-area: card-a;
+
+    height: 426px;
+    max-width: 378px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #F5621F;
+    background-image: url(../img/pug.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 100%;
+    background-position-x: 100%;
+    background-size: 200px;
+    box-shadow: 0px 0px 30px #74B42C1A;
 }
 
 .card-b {
-    grid-area: card-b;
+    height: 200px;
+    max-width: 378px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #3CABE0;
+    background-image: url(../img/tevzi.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 30%;
+    box-shadow: 0px 0px 30px #CC96D01A;
 }
 
 .card-c {
-    grid-area: card-c;
+    height: 200px;
+    max-width: 378px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #74B42C;
+    background-image: url(../img/tutiyushi.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 100%;
+    box-shadow: 0px 0px 30px #F5621F1A;
 }
 
 .card-d {
-    grid-area: card-d;
+    height: 200px;
+    max-width: 782px;
+    width: 206%;
+    border-radius: 10px;
+    background-color: #F5AD00;
+    background-image: url(../img/kata1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 100%;
+    background-size: 230px;
+    box-shadow: 0px 0px 30px #F5AD001A;
 }
