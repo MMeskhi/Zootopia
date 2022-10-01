@@ -13,6 +13,7 @@ html, body {
 
 a {
     text-decoration: none;
+    color: #111111;
 }
 
 ul {
@@ -35,7 +36,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 45px;
+    padding: 10px 40px 0 40px;
     height: 110px;
     max-width: 1276px;
     width: 100%;
@@ -189,6 +190,124 @@ header {
     transform: translate(-50%, 0);
 }
 
+.menu-active .search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.menu-active .search .search-cont input {
+    height: 55px;
+    width: 580px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 10px 30px #597DBC0D;
+    border-radius: 10px;
+    text-align: left;
+    text-indent: 20px;
+    border: none;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.menu-active .search .search-cont input:hover {
+    box-shadow: 0px 30px 50px #597DBC0D;
+}
+
+.menu-active .search .search-cont input:focus {
+    box-shadow: 0px 30px 50px #597DBC0D;
+}
+
+.menu-active .search .search-cont input::placeholder {
+    color: #9C9C9C;
+    font-size: 14px;
+}
+
+.menu-active .search-icon {
+    filter: invert(1);
+}
+
+.menu-active .search-cont {
+    position: relative;
+}
+
+.search .search-cont button {
+    background-color: #74B42C;
+    border-radius: 6px;
+    width: 35px;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+
+    position: absolute;
+    right: 4%;
+    top: 20%;
+}
+
+.search .search-cont button:hover {
+    opacity: 90%;
+}
+
+.menu-category ul {
+    max-width: 880px;
+    width: 100%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-category ul li a {
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.menu-category ul li .main {
+    color: #74B42C;
+}
+
+.menu-category ul li a:hover {
+    color: #74B42C;
+}
+
+.menu-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.menu-col:not(:last-child) {
+    margin-right: 40px;
+}
+
+.menu-col h4 {
+    font-size: 18px;
+    color: #8FC356;
+    margin-bottom: 16px;
+    font-weight: normal;
+}
+
+.menu-col ul li:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.menu-col ul li a {
+    font-size: 14px;
+    color: #6E6E6E;
+    display: block;
+    transition: all 0.3s;
+}
+
+.menu-col ul li a:hover {
+    color: #74B42C;
+}
+
+
 /* Sections */
 .container {
     max-width: 1186px;
@@ -294,7 +413,6 @@ header {
     width: 100%;
     border-radius: 10px;
     font-size: 14px;
-    font-weight: bold;
     transition: all 0.5s ease;
 }
 
