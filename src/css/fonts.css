@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "FiraGO Medium";
+    src: url("../fonts/FiraGO-Medium.eot");
+    src: url("../fonts/FiraGO-Medium.otf") format("oft"),
+        url("../fonts/FiraGO-Medium.woff2") format("woff2"),
+        url("../fonts/FiraGO-Medium.woff") format("woff"),
+        url("../fonts/FiraGO-Medium.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

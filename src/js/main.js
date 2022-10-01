@@ -1,7 +1,23 @@
 //Hamburger Menu
-const btn = document.getElementById("hamburger");
+const btnOpen = document.getElementById("hamburger");
+const btnClose = document.getElementById("hamburgerCat");
+const navBar = document.querySelector(".navbar");
+const menuActive = document.querySelector(".menu-active");
 
-function navToggle() {
-  btn.classList.toggle("is-active");
+function navOpen() {
+  btnOpen.classList.toggle("is-active");
+  navBar.style.visibility = "hidden";
+  menuActive.style.height = "700px";
+  menuActive.style.opacity = "1";
+  menuActive.style.zIndex = "99";
 }
-btn.addEventListener("click", navToggle);
+btnOpen.addEventListener("click", navOpen);
+
+function navClose() {
+  btnOpen.classList.toggle("is-active");
+  navBar.style.visibility = "";
+  menuActive.style.height = "";
+  menuActive.style.opacity = "";
+  menuActive.style.zIndex = "1";
+}
+btnClose.addEventListener("click", navClose);
