@@ -30,6 +30,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 180px;
 }
 
 .navbar {
@@ -123,6 +124,7 @@ header {
     padding: 30px 40px 0 40px;
     height: 0px;
     opacity: 0;
+    z-index: -99;
     position: fixed;
     top: 0;
     left: 0;
@@ -155,8 +157,8 @@ header {
     color: #111111;
 }
 
-.menu ul li .main {
-    color: #111111;
+.main {
+    color: #111111 !important;
 }
 
 .menu li:not(:last-child) {
@@ -276,7 +278,6 @@ header {
 
 .menu-row {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     margin-top: 60px;
 }
@@ -324,7 +325,6 @@ header {
     background-size: cover;
     background-position-y: 30%;
     box-shadow: 0px 0px 30px #F5AD001A;
-    margin-top: 180px;
 
     position: relative;
 }
@@ -569,4 +569,223 @@ header {
     background-position-y: 100%;
     background-size: 230px;
     box-shadow: 0px 0px 30px #F5AD001A;
+}
+
+
+/* Footer */
+footer {
+    max-width: 1200px;
+    width: 100%;
+    margin: 130px auto 20px;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-about {
+    max-width: 378px;
+    width: 100%;
+}
+
+.footer-about img {
+    max-width: 142px;
+    width: 100%;
+    height: 20px;
+    margin-bottom: 27px;
+}
+
+.footer-about p {
+    color: #6E6E6E;
+    font-size: 12px;
+}
+
+.footer-contact {
+    max-width: 169px;
+    width: 100%;
+}
+
+.footer-contact ul span {
+    font-size: 12px;
+    color: #111111;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-contact .fb {
+    width: 45px;
+    height: 45px;
+    background-color: #FFFFFF;
+    border: 1px solid #E7E7E7;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+    margin-top: 15px;
+}
+
+.footer-contact .fb:hover {
+    opacity: 80%;
+}
+
+.footer-col:not(:last-child) {
+    margin-right: 40px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #111111;
+    margin-bottom: 16px;
+    font-weight: normal;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+    font-size: 14px;
+    color: #6E6E6E;
+    display: block;
+    transition: all 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #111111;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 190px;
+}
+
+.footer-bottom span {
+    color: #9C9C9C;
+    font-size: 14px;
+}
+
+.footer-bottom .smartweb span {
+    color: #111111;
+    font-size: 14px;
+}
+
+.footer-bottom .smartweb .sw {
+    color: #74B42C;
+}
+
+.footer-bottom .banks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 143px;
+    width: 100%;
+}
+
+.footer-bottom .banks img:not(:last-child) {
+    margin-right: 40px;
+}
+
+/* About Us Page*/
+.section-head span {
+    font-size: 14px;
+    color: #C8C8C8;
+    margin-right: 10px;
+}
+
+.section-head {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.aboutus-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutus-cont .aboutus-bg {
+    max-width: 984px;
+    width: 100%;
+    height: 400px;
+    background-color: #F5621F;
+    background-image: url(../img/Layer\ 2.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 65px;
+}
+
+.aboutus-cont .aboutus-text {
+    max-width: 782px;
+    width: 100%;
+}
+
+.aboutus-cont h2 {
+    font-size: 28px;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.aboutus-cont p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+
+/* Contact Page */
+.contact-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 950px;
+}
+
+.contact-cont iframe {
+    height: 400px;
+    max-width: 480px;
+    width: 100%;
+}
+
+.contact-cont ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-cont ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.contact-cont ul li img {
+    width: 24px;
+    height: 24px;
+}
+
+.contact-cont ul li div {
+    margin-left: 30px;
+    max-width: 254px;
+    width: 100%;
+}
+
+.contact-cont ul li div span {
+    font-size: 14px;
+    color: #9C9C9C;
+}
+
+.contact-cont ul li div h6 {
+    font-size: 18px;
+    color: #111111;
+    font-weight: normal;
+}
+
+.contact-cont ul li div h6:not(:last-child) {
+    margin-top: 9px;
 }

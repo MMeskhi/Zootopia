@@ -18,6 +18,6 @@ function navClose() {
   navBar.style.visibility = "";
   menuActive.style.height = "";
   menuActive.style.opacity = "";
-  menuActive.style.zIndex = "1";
+  menuActive.style.zIndex = "-99";
 }
 btnClose.addEventListener("click", navClose);
