@@ -388,10 +388,10 @@ header {
 }
 
 #bgC {
-    background-image: url(../img/ku.png);
-    background-size: 600px;
-    background-position-y: 55%;
-    background-position-x: 80%;
+    background-image: url(../img/img-hero_dog.png);
+    background-size: 250px;
+    background-position-y: -50%;
+    background-position-x: 50%;
     background-color: #F5621F;
 }
 
