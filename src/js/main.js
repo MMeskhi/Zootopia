@@ -21,3 +21,55 @@ function navClose() {
   menuActive.style.zIndex = "-99";
 }
 btnClose.addEventListener("click", navClose);
+
+//Big Slider
+const bgSlider = document.querySelectorAll(".bg-slider");
+
+const prevBtn = document.getElementById("arrowL");
+const nextBtn = document.getElementById("arrowR");
+
+const slide = document.querySelectorAll(".line");
+
+let activeIndex = 0;
+
+function slideShow() {
+  bgSlider.forEach((item, i) => {
+    if (activeIndex === i) {
+      item.classList.add("active");
+    } else {
+      item.classList.remove("active");
+    }
+  });
+
+  slide.forEach((item, i) => {
+    if (activeIndex === i) {
+      item.classList.add("active");
+    } else {
+      item.classList.remove("active");
+    }
+  });
+}
+
+function showNextSlide() {
+  activeIndex = activeIndex + 1;
+  if (activeIndex > bgSlider.length - 1) {
+    activeIndex = 0;
+  }
+  slideShow();
+}
+
+function showPrevSlide() {
+  activeIndex = activeIndex - 1;
+  if (activeIndex < 0) {
+    activeIndex = bgSlider.length - 1;
+  }
+  slideShow();
+}
+
+prevBtn.addEventListener("click", () => {
+  showPrevSlide();
+});
+
+nextBtn.addEventListener("click", () => {
+  showNextSlide();
+});

@@ -320,13 +320,42 @@ header {
     height: 280px;
     border-radius: 10px;
     background-color: #F5AD00;
-    background-image: url(../img/pug.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-y: 30%;
     box-shadow: 0px 0px 30px #F5AD001A;
 
     position: relative;
+}
+
+.bg-slider {
+    height: 280px;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.big-slider .active {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+.bg-slider .bg {
+    height: 280px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-size: 700px;
+}
+
+#bgA {
+    background-image: url(../img/pug.png);
+}
+
+#bgB {
+    background-image: url(../img/kata1.png);
+}
+
+#bgC {
+    background-image: url(../img/tutiyushi.png);
 }
 
 .bg-cont {
@@ -347,14 +376,14 @@ header {
     width: 344px;
 }
 
-.bg-slider .absolute-l {
+.big-slider .absolute-l {
     position: absolute;
     left: 5%;
     top: 50%;
     transform: translate(-50%, -50%);
 }
 
-.bg-slider .absolute-r {
+.big-slider .absolute-r {
     position: absolute;
     right: 2%;
     top: 50%;
@@ -379,6 +408,35 @@ header {
 
 .arrow .r {
     transform: rotate(180deg);
+}
+
+.big-slider .lines {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    left: 50%;
+    bottom: 4%;
+    transform: translate(-50%);
+}
+
+.big-slider .lines .line {
+    height: 5px;
+    width: 12px;
+    background-color: #FFFFFF;
+    opacity: 50%;
+}
+
+.big-slider .lines .line:not(:last-child) {
+    margin-right: 8px;
+}
+
+.big-slider .lines .active {
+    height: 5px;
+    width: 20px;
+    background-color: #FFFFFF;
+    opacity: 100%;
 }
 
 .bg-cont button {
@@ -514,61 +572,99 @@ header {
         "card-a card-d card-d";
 }
 
-.card-a {
+.card-grid .a {
     grid-area: card-a;
-
     height: 426px;
     max-width: 378px;
     width: 100%;
-    border-radius: 10px;
     background-color: #F5621F;
     background-image: url(../img/pug.png);
-    background-repeat: no-repeat;
-    background-size: cover;
     background-position-y: 100%;
     background-position-x: 100%;
     background-size: 200px;
     box-shadow: 0px 0px 30px #74B42C1A;
+    justify-content: flex-start;
+    padding: 70px 0 0 40px;
 }
 
-.card-b {
+.card-grid .b {
     height: 200px;
     max-width: 378px;
     width: 100%;
-    border-radius: 10px;
+
     background-color: #3CABE0;
     background-image: url(../img/tevzi.png);
-    background-repeat: no-repeat;
-    background-size: cover;
     background-position-y: 30%;
     box-shadow: 0px 0px 30px #CC96D01A;
+    align-items: flex-end;
+    padding-right: 30px;
 }
 
-.card-c {
+.card-grid .c {
     height: 200px;
     max-width: 378px;
     width: 100%;
-    border-radius: 10px;
     background-color: #74B42C;
     background-image: url(../img/tutiyushi.png);
-    background-repeat: no-repeat;
-    background-size: cover;
     background-position-y: 100%;
     box-shadow: 0px 0px 30px #F5621F1A;
+    padding-left: 30px;
 }
 
-.card-d {
+.card-grid .d {
     height: 200px;
     max-width: 782px;
     width: 206%;
-    border-radius: 10px;
     background-color: #F5AD00;
     background-image: url(../img/kata1.png);
-    background-repeat: no-repeat;
-    background-size: cover;
     background-position-y: 100%;
     background-size: 230px;
     box-shadow: 0px 0px 30px #F5AD001A;
+    align-items: center;
+}
+
+.medium-card {
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.medium-card span {
+    font-size: 14px;
+    color: #FFFFFF;
+    margin-bottom: 28px;
+}
+
+.medium-card h5 {
+    font-size: 24px;
+    color: #FFFFFF;
+    font-weight: normal;
+}
+
+.medium-card h6 {
+    font-size: 18px;
+    color: #FFFFFF;
+    font-weight: normal;
+}
+
+.medium-card button {
+    height: 42px;
+    width: 161px;
+    background-color: #FFFFFF;
+    color: #111111;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 45px;
+    transition: all 0.3s ease;
+}
+
+.medium-card button:hover {
+    opacity: 90%;
 }
 
 
@@ -593,12 +689,17 @@ footer {
     max-width: 142px;
     width: 100%;
     height: 20px;
-    margin-bottom: 27px;
+    transition: all 0.3s ease;
+}
+
+.footer-about img:hover {
+    filter: grayscale(50%);
 }
 
 .footer-about p {
     color: #6E6E6E;
     font-size: 12px;
+    margin-top: 27px;
 }
 
 .footer-contact {
@@ -762,6 +863,7 @@ footer {
     display: flex;
     align-items: center;
     margin-bottom: 30px;
+    white-space: nowrap;
 }
 
 .contact-cont ul li img {

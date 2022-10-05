@@ -58,9 +58,9 @@
         <div class="menu-active">
             <div class="menu">
                 <ul>
-                    <li><a class="main" href="/index.html">მთავარი</a></li>
-                    <li><a href="/aboutus.html">ჩვენ შესახებ</a></li>
-                    <li><a href="/contact.html">კონტაქტი</a></li>
+                    <li><a class="main" href="index.html">მთავარი</a></li>
+                    <li><a href="aboutus.html">ჩვენ შესახებ</a></li>
+                    <li><a href="contact.html">კონტაქტი</a></li>
                 </ul>
                 <div class="haburger-cat" id="hamburgerCat">
                     <img src="src/img/hamburger-cat.svg" alt="">
@@ -149,22 +149,40 @@
     </header>
 
     <section class="big-slider container">
-        <div class="bg-slider">
-            <div class="arrow absolute-l">
-                <img src="src/img/arrow-long-right.svg" alt="">
-            </div>
-            <div class="bg-cont">
-                <h2>მიიღე 30%-იანი ფასდაკლება პედიგრის ნებისმიერ პროდუქციაზე</h2>
-                <button>შეიძინე ეხლავე</button>
-                <div>
-                    <div class="selected"></div>
-                    <div class="not-selected"></div>
-                    <div class="not-selected"></div>
+        <div class="bg-slider active">
+            <div class="bg" id="bgA">
+                <div class="bg-cont">
+                    <h2>მიიღე 30%-იანი ფასდაკლება პედიგრის ნებისმიერ პროდუქციაზე</h2>
+                    <button>შეიძინე ეხლავე</button>
                 </div>
             </div>
-            <div class="arrow absolute-r">
-                <img class="r" src="src/img/arrow-long-right.svg" alt="">
+        </div>
+        <div class="bg-slider">
+            <div class="bg" id="bgB">
+                <div class="bg-cont">
+                    <h2>ლორემ იპსუმ გულიც გამოვკაჟდი პლაკატების ივერიას მუმიის.</h2>
+                    <button>შეიძინე ეხლავე</button>
+                </div>
             </div>
+        </div>
+        <div class="bg-slider">
+            <div class="bg" id="bgC">
+                <div class="bg-cont">
+                    <h2>ეწაფებოდა, დაფლეთილ, გაბრწყინებულ მენტალიტეტისთვის</h2>
+                    <button>შეიძინე ეხლავე</button>
+                </div>
+            </div>
+        </div>
+        <div id="arrowL" class="arrow absolute-l">
+            <img src="src/img/arrow-long-right.svg" alt="">
+        </div>
+        <div class="lines">
+            <div class="line active"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div id="arrowR" class="arrow absolute-r">
+            <img class="r" src="src/img/arrow-long-right.svg" alt="">
         </div>
     </section>
 
@@ -205,10 +223,27 @@
 
     <section class="medium-cards container">
         <div class="card-grid">
-            <div class="card-a"></div>
-            <div class="card-b"></div>
-            <div class="card-c"></div>
-            <div class="card-d"></div>
+            <div class="medium-card a">
+                <span>ძაღლთა სამყარო</span>
+                <h5>საუკეთესო არჩევანი</h5>
+                <h6>ერთგული მეგობრისთვის</h6>
+                <button>პროდუქციის ნახვა</button>
+            </div>
+            <div class="medium-card b">
+                <h5>შეუქმენი სასიამოვნო</h5>
+                <h6>გარემო შენს თევზებს</h6>
+                <button>პროდუქციის ნახვა</button>
+            </div>
+            <div class="medium-card c">
+                <h5>ყველანაირი აქსესუარი</h5>
+                <h6>მფრინველებისათვის</h6>
+                <button>პროდუქციის ნახვა</button>
+            </div>
+            <div class="medium-card d">
+                <h5>100% ნატურალური საკვები</h5>
+                <h6>თქვენი კატებისათვის</h6>
+                <button>პროდუქციის ნახვა</button>
+            </div>
         </div>
     </section>
 
@@ -216,7 +251,7 @@
         <div class="footer-cont">
             <div class="footer-row">
                 <div class="footer-col footer-about">
-                    <img src="src/img/zootopia.svg" alt="Zootopia">
+                    <a href="#"><img src="src/img/zootopia.svg" alt="Zootopia"></a>
                     <p>საბეჭდი და ტიპოგრაფიული ინდუსტრიის უშინაარსო ტექსტია. იგი სტანდარტად 1500-იანი წლებიდან იქცა,
                         როდესაც უცნობმა მბეჭდავმა ამწყობ დაზგაზე წიგნის საცდელი ეგზემპლარი დაბეჭდა.</p>
                 </div>
