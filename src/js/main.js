@@ -22,35 +22,15 @@ function navClose() {
 }
 btnClose.addEventListener("click", navClose);
 
-//Sliders
-const bgSlider = document.querySelectorAll(".bg-slider");
-
-const bigCardSlider = document.querySelectorAll(".big-card");
+//Top Seller Slider
+const bigCardSlider = document.querySelectorAll(".big-card-cont");
 
 const prevBtn = document.getElementById("arrowL");
 const nextBtn = document.getElementById("arrowR");
 
-const slide = document.querySelectorAll(".line");
-
 let activeIndex = 0;
 
 function slideShow() {
-  bgSlider.forEach((item, i) => {
-    if (activeIndex === i) {
-      item.classList.add("active");
-    } else {
-      item.classList.remove("active");
-    }
-  });
-
-  slide.forEach((item, i) => {
-    if (activeIndex === i) {
-      item.classList.add("active");
-    } else {
-      item.classList.remove("active");
-    }
-  });
-
   bigCardSlider.forEach((item, i) => {
     if (activeIndex === i) {
       item.classList.add("active");
@@ -62,7 +42,7 @@ function slideShow() {
 
 function showNextSlide() {
   activeIndex = activeIndex + 1;
-  if (activeIndex > bgSlider.length - 1) {
+  if (activeIndex > bigCardSlider.length - 1) {
     activeIndex = 0;
   }
   slideShow();
@@ -71,7 +51,7 @@ function showNextSlide() {
 function showPrevSlide() {
   activeIndex = activeIndex - 1;
   if (activeIndex < 0) {
-    activeIndex = bgSlider.length - 1;
+    activeIndex = bigCardSlider.length - 1;
   }
   slideShow();
 }
@@ -82,4 +62,19 @@ prevBtn.addEventListener("click", () => {
 
 nextBtn.addEventListener("click", () => {
   showNextSlide();
+});
+
+//Big Slider
+const swiper = new Swiper(".swiper", {
+  direction: "horizontal",
+  loop: true,
+
+  pagination: {
+    el: ".swiper-pagination",
+  },
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });

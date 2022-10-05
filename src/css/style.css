@@ -316,34 +316,64 @@ header {
     margin: 70px auto;
 }
 
-.big-slider {
+.swiper {
+    width: 1186px;
     height: 280px;
-    border-radius: 10px;
-    background-color: #F5AD00;
     box-shadow: 0px 0px 30px #F5AD001A;
-
-    position: relative;
+    border-radius: 10px;
 }
 
-.bg-slider {
-    height: 280px;
+.swiper-button-next::after {
     display: none;
-    opacity: 0;
-    transition: opacity 0.5s;
 }
 
-.big-slider .active {
-    display: block;
-    visibility: visible;
-    opacity: 1;
+.swiper-button-prev::after {
+    display: none;
 }
 
-.bg-slider .bg {
+.swiper-button-prev, .swiper-button-next {
+    height: 40px !important;
+    width: 40px !important;
+    background-color: #FFFFFF;
+    background-image: url(../img/arrow-long-right.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.2s ease;
+}
+
+.swiper-button-next {
+    transform: rotate(180deg);
+}
+
+.swiper-button-prev:hover, .swiper-button-next:hover {
+    opacity: 90%;
+}
+
+.swiper-button-prev:active, .swiper-button-next:active {
+    opacity: 70%;
+}
+
+.swiper-pagination-bullet {
+    background-color: #ffffff !important;
+    opacity: 50%;
+    width: 12px !important;
+    height: 5px !important;
+    border-radius: 0% !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #ffffff !important;
+    width: 28px !important;
+    height: 5px !important;
+    border-radius: 0% !important;
+}
+
+.swiper-slide .bg {
     height: 280px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    background-size: 700px;
+    background-position-y: 30%;
+    background-color: #F5AD00;
 }
 
 #bgA {
@@ -351,11 +381,18 @@ header {
 }
 
 #bgB {
-    background-image: url(../img/kata1.png);
+    background-image: url(../img/Kit-Cat.png);
+    background-size: 600px;
+    background-position-x: 50%;
+    background-color: #3CABE0;
 }
 
 #bgC {
-    background-image: url(../img/tutiyushi.png);
+    background-image: url(../img/ku.png);
+    background-size: 600px;
+    background-position-y: 55%;
+    background-position-x: 80%;
+    background-color: #F5621F;
 }
 
 .bg-cont {
@@ -374,69 +411,6 @@ header {
 .bg-cont h2 {
     color: #FFFFFF;
     width: 344px;
-}
-
-.big-slider .absolute-l {
-    position: absolute;
-    left: 5%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.big-slider .absolute-r {
-    position: absolute;
-    right: 2%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.arrow {
-    height: 40px;
-    width: 40px;
-    background-color: #FFFFFF;
-    box-shadow: 0px 0px 20px #597DBC1A;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s ease;
-}
-
-.arrow:hover {
-    cursor: pointer;
-    opacity: 95%;
-}
-
-.arrow .r {
-    transform: rotate(180deg);
-}
-
-.big-slider .lines {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    position: absolute;
-    left: 50%;
-    bottom: 4%;
-    transform: translate(-50%);
-}
-
-.big-slider .lines .line {
-    height: 5px;
-    width: 12px;
-    background-color: #FFFFFF;
-    opacity: 50%;
-}
-
-.big-slider .lines .line:not(:last-child) {
-    margin-right: 8px;
-}
-
-.big-slider .lines .active {
-    height: 5px;
-    width: 20px;
-    background-color: #FFFFFF;
-    opacity: 100%;
 }
 
 .bg-cont button {
@@ -760,7 +734,7 @@ header {
 .big-cards .big-card-cont h5 {
     font-size: 18px;
     text-align: left;
-    margin-right: 70px;
+    margin: 0 70px 50px 0;
 }
 
 .big-cards .big-card-cont img {
@@ -787,7 +761,7 @@ header {
 }
 
 .big-cards .big-card-cont button:hover {
-    opacity: 90%;
+    opacity: 80%;
 }
 
 .big-cards .c .circle {
@@ -832,11 +806,20 @@ header {
     width: 40px;
     background-color: #111111;
     box-shadow: 0px 0px 20px #597DBC1A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    z-index: 3;
 }
 
-.big-cards .c .arrow img {
-    -webkit-filter: invert(100%);
-    filter: invert(100%);
+.arrow .r {
+    transform: rotate(180deg);
+}
+
+.arrow:hover {
+    opacity: 80%;
 }
 
 .large-card .card {

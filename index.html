@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="src/css/media.css">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
     <title>Zootopia</title>
 </head>
 
@@ -149,40 +151,34 @@
     </header>
 
     <section class="big-slider container">
-        <div class="bg-slider active">
-            <div class="bg" id="bgA">
-                <div class="bg-cont">
-                    <h2>მიიღე 30%-იანი ფასდაკლება პედიგრის ნებისმიერ პროდუქციაზე</h2>
-                    <button>შეიძინე ეხლავე</button>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="bg" id="bgA">
+                        <div class="bg-cont">
+                            <h2>მიიღე 30%-იანი ფასდაკლება პედიგრის ნებისმიერ პროდუქციაზე</h2>
+                            <button>შეიძინე ეხლავე</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-slide">
+                        <div class="bg" id="bgB">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-slide">
+                        <div class="bg" id="bgC">
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="bg-slider">
-            <div class="bg" id="bgB">
-                <div class="bg-cont">
-                    <h2>ლორემ იპსუმ გულიც გამოვკაჟდი პლაკატების ივერიას მუმიის.</h2>
-                    <button>შეიძინე ეხლავე</button>
-                </div>
-            </div>
-        </div>
-        <div class="bg-slider">
-            <div class="bg" id="bgC">
-                <div class="bg-cont">
-                    <h2>ეწაფებოდა, დაფლეთილ, გაბრწყინებულ მენტალიტეტისთვის</h2>
-                    <button>შეიძინე ეხლავე</button>
-                </div>
-            </div>
-        </div>
-        <div id="arrowL" class="arrow absolute-l">
-            <img src="src/img/arrow-long-right.svg" alt="">
-        </div>
-        <div class="lines">
-            <div class="line active"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
-        <div id="arrowR" class="arrow absolute-r">
-            <img class="r" src="src/img/arrow-long-right.svg" alt="">
+
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
     </section>
 
@@ -274,21 +270,21 @@
                 <img src="src/img/belcando.png" alt="Belcando">
                 <h6>Belcando</h6>
                 <button>პროდუქციის ნახვა</button>
-                <span class="value">135 ₾</span>
+                <span class="value">75 ₾</span>
             </div>
             <div class="big-card-cont">
                 <h5>ყველაზე გაყიდვადი<br>პროდუქცია</h5>
                 <img src="src/img/leonardo.png" alt="Leonardo">
                 <h6>Leonardo</h6>
                 <button>პროდუქციის ნახვა</button>
-                <span class="value">135 ₾</span>
+                <span class="value">38 ₾</span>
             </div>
             <div class="circle"></div>
             <div id="arrowL" class="arrow absolute-l">
-                <img src="src/img/arrow-long-right.svg" alt="">
+                <img src="src/img/arrow-long-right-white.svg" alt="Arrow">
             </div>
             <div id="arrowR" class="arrow absolute-r">
-                <img class="r" src="src/img/arrow-long-right.svg" alt="">
+                <img class="r" src="src/img/arrow-long-right-white.svg" alt="Arrow">
             </div>
         </div>
     </section>
@@ -356,6 +352,7 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="src/js/main.js"></script>
 </body>
 
