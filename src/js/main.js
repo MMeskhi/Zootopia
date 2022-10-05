@@ -22,8 +22,10 @@ function navClose() {
 }
 btnClose.addEventListener("click", navClose);
 
-//Big Slider
+//Sliders
 const bgSlider = document.querySelectorAll(".bg-slider");
+
+const bigCardSlider = document.querySelectorAll(".big-card");
 
 const prevBtn = document.getElementById("arrowL");
 const nextBtn = document.getElementById("arrowR");
@@ -42,6 +44,14 @@ function slideShow() {
   });
 
   slide.forEach((item, i) => {
+    if (activeIndex === i) {
+      item.classList.add("active");
+    } else {
+      item.classList.remove("active");
+    }
+  });
+
+  bigCardSlider.forEach((item, i) => {
     if (activeIndex === i) {
       item.classList.add("active");
     } else {

@@ -45,7 +45,7 @@ header {
     box-shadow: 0px 0px 10px #597DBC0D;
     border-radius: 0px 0px 50px 50px;
     transition: all 0.3s ease;
-    z-index: 2;
+    z-index: 5;
     position: fixed;
     top: 0;
     left: 0;
@@ -667,6 +667,214 @@ header {
     opacity: 90%;
 }
 
+.big-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.big-card {
+    height: 500px;
+    max-width: 378px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 20px #597DBC0D;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.big-card:not(:last-child) {
+    margin-right: 26px;
+}
+
+.big-card:hover {
+    box-shadow: 0px 0px 60px #597DBC0D;
+}
+
+.big-cards h5 {
+    width: 232px;
+    font-size: 22px;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.big-cards .b {
+    background-image: url(../img/kurdgeli.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #FEE02E;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 40px 0 0 40px;
+}
+
+.big-cards .b h5 {
+    text-align: left;
+}
+
+.big-cards .b button {
+    height: 42px;
+    width: 161px;
+    background-color: #FFFFFF;
+    color: #111111;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 45px;
+    transition: all 0.3s ease;
+}
+
+.big-cards .b button:hover {
+    opacity: 90%;
+}
+
+.big-cards .c {
+
+    position: relative;
+}
+
+.big-cards .big-card-cont {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.big-cards .big-card-cont.active {
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+}
+
+.big-cards .big-card-cont h5 {
+    font-size: 18px;
+    text-align: left;
+    margin-right: 70px;
+}
+
+.big-cards .big-card-cont img {
+    height: 163px;
+}
+
+.big-cards .big-card-cont h6 {
+    font-size: 18px;
+    font-weight: normal;
+    margin-top: 23px;
+}
+
+.big-cards .big-card-cont button {
+    height: 42px;
+    width: 161px;
+    background-color: #111111;
+    color: #FFFFFF;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 45px;
+    transition: all 0.3s ease;
+}
+
+.big-cards .big-card-cont button:hover {
+    opacity: 90%;
+}
+
+.big-cards .c .circle {
+    height: 119px;
+    width: 119px;
+    background-color: #F5621F;
+    box-shadow: -10px 10px 20px #202C530D;
+    border-radius: 0px 10px 0px 193px;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.big-cards .big-card-cont .value {
+    font-size: 24px;
+    color: #FFFFFF;
+
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    z-index: 1;
+}
+
+.big-cards .c .absolute-l {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
+.big-cards .c .absolute-r {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
+.big-cards .c .arrow {
+    height: 40px;
+    width: 40px;
+    background-color: #111111;
+    box-shadow: 0px 0px 20px #597DBC1A;
+}
+
+.big-cards .c .arrow img {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+.large-card .card {
+    height: 250px;
+    max-width: 1185px;
+    width: 100%;
+    background-color: #F5AD00;
+    background-image: url(../img/ku.png);
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    background-position-x: 90%;
+    box-shadow: 0px 10px 20px #F5AD001A;
+    border-radius: 10px;
+    padding: 40px 0 0 100px;
+}
+
+.large-card .card h5 {
+    font-size: 32px;
+    font-weight: normal;
+    color: #FFFFFF;
+}
+
+.large-card .card button {
+    height: 42px;
+    width: 161px;
+    background-color: #FFFFFF;
+    color: #111111;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: all 0.3s ease;
+}
+
+.large-card .card button:hover {
+    opacity: 90%;
+}
 
 /* Footer */
 footer {
