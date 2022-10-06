@@ -1,4 +1,4 @@
-//Hamburger Menu
+//Menu open close
 const btnOpen = document.getElementById("hamburger");
 const btnClose = document.getElementById("hamburgerCat");
 const navBar = document.querySelector(".navbar");
@@ -22,50 +22,20 @@ function navClose() {
 }
 btnClose.addEventListener("click", navClose);
 
-//Top Seller Slider
-const bigCardSlider = document.querySelectorAll(".big-card-cont");
-
-const prevBtn = document.getElementById("arrowL");
-const nextBtn = document.getElementById("arrowR");
-
-let activeIndex = 0;
-
-function slideShow() {
-  bigCardSlider.forEach((item, i) => {
-    if (activeIndex === i) {
-      item.classList.add("active");
-    } else {
-      item.classList.remove("active");
-    }
-  });
-}
-
-function showNextSlide() {
-  activeIndex = activeIndex + 1;
-  if (activeIndex > bigCardSlider.length - 1) {
-    activeIndex = 0;
+//Click outside nav menu to close
+window.addEventListener("click", function (e) {
+  if (
+    menuActive.contains(e.target) ||
+    navBar.contains(e.target) ||
+    menuActive.style.zIndex === "-99"
+  ) {
+  } else {
+    navClose();
   }
-  slideShow();
-}
-
-function showPrevSlide() {
-  activeIndex = activeIndex - 1;
-  if (activeIndex < 0) {
-    activeIndex = bigCardSlider.length - 1;
-  }
-  slideShow();
-}
-
-prevBtn.addEventListener("click", () => {
-  showPrevSlide();
 });
 
-nextBtn.addEventListener("click", () => {
-  showNextSlide();
-});
-
-//Big Slider
-const swiper = new Swiper(".swiper", {
+//Big slider
+const swiper1 = new Swiper(".big-slider .swiper", {
   direction: "horizontal",
   loop: true,
 
@@ -73,6 +43,23 @@ const swiper = new Swiper(".swiper", {
     el: ".swiper-pagination",
     clickable: true,
   },
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+//Product sliders
+const swiper2 = new Swiper(".top-products .swiper", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  freeMode: true,
+});
+
+const swiper3 = new Swiper(".big-card .swiper", {
+  direction: "horizontal",
+  loop: true,
 
   navigation: {
     nextEl: ".swiper-button-next",
