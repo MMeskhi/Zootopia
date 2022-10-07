@@ -38,6 +38,10 @@ btnClose.addEventListener("click", navClose);
 var swiper1 = new Swiper(".big-slider .swiper", {
   direction: "horizontal",
   loop: true,
+  autoplay: {
+    delay: 10000,
+    disableOnInteraction: false,
+  },
 
   pagination: {
     el: ".swiper-pagination",
@@ -52,35 +56,36 @@ var swiper1 = new Swiper(".big-slider .swiper", {
 
 //Product sliders
 var swiper2 = new Swiper(".top-products .swiper", {
+  direction: "horizontal",
   slidesPerView: 4,
   spaceBetween: 26,
   autoplay: {
-    delay: 3000,
+    delay: 5000000,
+    disableOnInteraction: false,
   },
+
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
 });
 
-var swiper3 = new Swiper(".big-card .swiper", {
+var swiper3 = new Swiper(".brands .swiper", {
+  direction: "horizontal",
+  slidesPerView: 6,
+  spaceBetween: 26,
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
+});
+
+var swiper4 = new Swiper(".big-card .swiper", {
   direction: "horizontal",
   loop: true,
 
   navigation: {
     nextEl: ".swiper-button-next-unique",
     prevEl: ".swiper-button-prev-unique",
-  },
-});
-
-var swiper2 = new Swiper(".brands .swiper", {
-  slidesPerView: 4,
-  spaceBetween: 26,
-  autoplay: {
-    delay: 3000,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
   },
 });

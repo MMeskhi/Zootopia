@@ -842,7 +842,7 @@ header {
     opacity: 90%;
 }
 
-.brands, .top-products {
+.top-products {
     position: relative;
 }
 
@@ -854,25 +854,18 @@ header {
 .top-products .swiper {
     height: 441px;
     width: 100%;
-    margin: 20px auto;
+    margin: 31px auto;
 }
 
 .top-products .swiper-slide {
     text-align: left;
-    background: #fff;
+    background: #ffffff;
 
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
+    flex-direction: column;
     justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
     align-items: center;
+    padding: 0px 30px 0 30px;
 
     box-shadow: 0px 0px 20px #597DBC0D;
     border: 1px solid #E7E7E74D;
@@ -881,7 +874,7 @@ header {
 }
 
 .top-products .swiper-slide:hover {
-    box-shadow: 0px 0px 20px #597dbc17;
+    box-shadow: 0px 0px 40px #597dbc1a;
 }
 
 .top-products .swiper-slide img {
@@ -891,17 +884,14 @@ header {
     object-fit: cover;
 }
 
-.brands .swiper-button-next::after,
 .top-products .swiper-button-next::after {
     display: none;
 }
 
-.brands .swiper-button-prev::after,
 .top-products .swiper-button-prev::after {
     display: none;
 }
 
-.brands .swiper-button-prev, .swiper-button-next,
 .top-products .swiper-button-prev, .swiper-button-next {
     height: 40px !important;
     width: 40px !important;
@@ -919,31 +909,130 @@ header {
     position: absolute;
 }
 
-.brands .swiper-button-next,
 .top-products .swiper-button-next {
     top: 60%;
     right: -60px;
 }
 
-.brands .swiper-button-prev,
 .top-products .swiper-button-prev {
     top: 60%;
     left: -60px;
 }
 
-.brands .swiper-button-next,
 .top-products .swiper-button-next {
     transform: rotate(180deg);
 }
 
-.brands .swiper-button-prev:hover, .swiper-button-next:hover,
 .top-products .swiper-button-prev:hover, .swiper-button-next:hover {
     opacity: 70%;
 }
 
-.brands .swiper-button-prev:active, .swiper-button-next:active,
 .top-products .swiper-button-prev:active, .swiper-button-next:active {
     opacity: 50%;
+}
+
+.top-products .swiper-slide img {
+    height: 150px;
+    max-width: 135px;
+    width: 100%;
+    margin-bottom: 19px;
+}
+
+.top-products .swiper-slide .title-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.top-products .swiper-slide .title-desc .title {
+    font-size: 18px;
+}
+
+.top-products .swiper-slide .title-desc .desc {
+    font-size: 12px;
+    color: #6E6E6E;
+}
+
+.top-products .swiper-slide .wgt {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-column-gap: 7px;
+    grid-row-gap: 7px;
+}
+
+.top-products .swiper-slide .wgt div {
+    height: 35px;
+    width: 105px;
+    background-color: #F8F8F8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.top-products .swiper-slide .wgt div:hover {
+    background-color: #E7E7E7;
+}
+
+.top-products .swiper-slide .price-basket {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 215px;
+}
+
+.top-products .swiper-slide .price-basket span {
+    font-size: 24px;
+    color: #111111;
+}
+
+.top-products .swiper-slide .price-basket .basket {
+    height: 34px;
+    width: 34px;
+    background-color: #74B42C;
+    background-image: url(../img/shopping-cart-white.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.top-products .swiper-slide .price-basket .basket:hover {
+    filter: grayscale(50%);
+}
+
+.brands .swiper {
+    height: 90px;
+    width: 100%;
+    margin: 31px auto;
+}
+
+.brands .swiper-slide {
+    background: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+
+    box-shadow: 0px 0px 20px #597DBC0D;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.brands .swiper-slide:hover {
+    box-shadow: 0px 0px 60px #597dbc23;
+    cursor: pointer;
+}
+
+.brands .swiper-slide img {
+    width: 96px;
 }
 
 /* Footer */
