@@ -22,20 +22,20 @@ function navClose() {
 }
 btnClose.addEventListener("click", navClose);
 
-//Click outside nav menu to close
-window.addEventListener("click", function (e) {
-  if (
-    menuActive.contains(e.target) ||
-    navBar.contains(e.target) ||
-    menuActive.style.zIndex === "-99"
-  ) {
-  } else {
-    navClose();
-  }
-});
+// // Click outside nav menu to close
+// window.addEventListener("click", function (e) {
+//   if (
+//     menuActive.contains(e.target) ||
+//     navBar.contains(e.target) ||
+//     menuActive.style.zIndex === "-99"
+//   ) {
+//   } else {
+//     navClose();
+//   }
+// });
 
 //Big slider
-const swiper1 = new Swiper(".big-slider .swiper", {
+var swiper1 = new Swiper(".big-slider .swiper", {
   direction: "horizontal",
   loop: true,
 
@@ -45,22 +45,40 @@ const swiper1 = new Swiper(".big-slider .swiper", {
   },
 
   navigation: {
+    nextEl: ".swiper-button-next-unique",
+    prevEl: ".swiper-button-prev-unique",
+  },
+});
+
+//Product sliders
+var swiper2 = new Swiper(".top-products .swiper", {
+  slidesPerView: 4,
+  spaceBetween: 26,
+  autoplay: {
+    delay: 3000,
+  },
+  navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
 });
 
-//Product sliders
-const swiper2 = new Swiper(".top-products .swiper", {
-  slidesPerView: 3,
-  spaceBetween: 30,
-  freeMode: true,
-});
-
-const swiper3 = new Swiper(".big-card .swiper", {
+var swiper3 = new Swiper(".big-card .swiper", {
   direction: "horizontal",
   loop: true,
 
+  navigation: {
+    nextEl: ".swiper-button-next-unique",
+    prevEl: ".swiper-button-prev-unique",
+  },
+});
+
+var swiper2 = new Swiper(".brands .swiper", {
+  slidesPerView: 4,
+  spaceBetween: 26,
+  autoplay: {
+    delay: 3000,
+  },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
