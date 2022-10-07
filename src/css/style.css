@@ -959,9 +959,10 @@ header {
     grid-template-columns: repeat(2, 2fr);
     grid-column-gap: 7px;
     grid-row-gap: 7px;
+    height: 120px;
 }
 
-.top-products .swiper-slide .wgt div {
+.top-products .swiper-slide .wgt .weight {
     height: 35px;
     width: 105px;
     background-color: #F8F8F8;
@@ -975,7 +976,11 @@ header {
     margin-bottom: 20px;
 }
 
-.top-products .swiper-slide .wgt div:hover {
+.top-products .swiper-slide .wgt .weight.active {
+    background-color: #E7E7E7;
+}
+
+.top-products .swiper-slide .wgt .weight:hover {
     background-color: #E7E7E7;
 }
 
@@ -991,6 +996,14 @@ header {
     color: #111111;
 }
 
+.top-products .swiper-slide .price-basket .price {
+    display: none;
+}
+
+.top-products .swiper-slide .price-basket .active {
+    display: block;
+}
+
 .top-products .swiper-slide .price-basket .basket {
     height: 34px;
     width: 34px;
@@ -1003,7 +1016,7 @@ header {
 }
 
 .top-products .swiper-slide .price-basket .basket:hover {
-    filter: grayscale(50%);
+    filter: grayscale(80%);
 }
 
 .brands .swiper {

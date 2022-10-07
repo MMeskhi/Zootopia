@@ -60,7 +60,7 @@ var swiper2 = new Swiper(".top-products .swiper", {
   slidesPerView: 4,
   spaceBetween: 26,
   autoplay: {
-    delay: 5000000,
+    delay: 5000,
     disableOnInteraction: false,
   },
 
@@ -88,4 +88,30 @@ var swiper4 = new Swiper(".big-card .swiper", {
     nextEl: ".swiper-button-next-unique",
     prevEl: ".swiper-button-prev-unique",
   },
+});
+
+//Product weight/price selector
+const prices = document.querySelectorAll(".priceA .price");
+const weights = document.querySelectorAll(".wgtA .weight");
+
+const changePrice = (n) => {
+  for (price of prices) {
+    price.classList.remove("active");
+  }
+  prices[n].classList.add("active");
+};
+
+const changeWeight = (n) => {
+  for (weight of weights) {
+    weight.classList.remove("active");
+  }
+  weights[n].classList.add("active");
+};
+
+weights.forEach((slide, iDot) => {
+  slide.addEventListener("click", () => {
+    i = iDot;
+    changeWeight(i);
+    changePrice(i);
+  });
 });
