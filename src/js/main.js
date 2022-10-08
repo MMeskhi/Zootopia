@@ -78,7 +78,7 @@ var swiper2 = new Swiper(".top-products .swiper", {
       spaceBetween: 20,
     },
 
-    480: {
+    600: {
       slidesPerView: 2,
       spaceBetween: 20,
     },

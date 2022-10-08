@@ -29,6 +29,14 @@
 }
 
 @media all and (max-width: 1024px) {
+    .menu-col {
+        margin-inline: 40px;
+    }
+
+    .hide {
+        display: none;
+    }
+
     .card-grid {
         display: grid;
         justify-items: center;
@@ -70,6 +78,10 @@
 
 
 @media all and (max-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+
     .big-cards .a {
         display: block;
     }
