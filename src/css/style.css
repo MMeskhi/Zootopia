@@ -5,10 +5,13 @@
     scroll-behavior: smooth !important;
 }
 
-html, body {
+body {
     font-family: "FiraGO Medium";
     line-height: 1.5;
     background-color: #FAFAFA;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow-x: hidden;
 }
 
 a {
@@ -314,6 +317,7 @@ header {
     max-width: 1186px;
     width: 100%;
     margin: 70px auto;
+    z-index: 5;
 }
 
 .big-slider .swiper {
@@ -340,6 +344,7 @@ header {
     background-position: center;
     transition: all 0.2s ease;
     box-shadow: 0px 0px 20px #597DBC1A;
+    border-radius: 4px;
     cursor: pointer;
     z-index: 1;
 
@@ -445,6 +450,47 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.leaf-section {
+    width: 100%;
+    height: 360px;
+    overflow: hidden;
+    margin-top: -50px;
+    z-index: 0;
+
+    position: relative;
+}
+
+.leaf-section-cnt {
+    width: 100%;
+    height: 360px;
+    overflow: hidden;
+    z-index: 0;
+
+    position: absolute;
+}
+
+.section-leaf-left {
+    height: 100%;
+    width: 260px;
+    background-image: url(../img/leafleft.svg);
+    background-repeat: no-repeat;
+
+    position: absolute;
+    bottom: -40%;
+    left: -100px;
+}
+
+.section-leaf-right {
+    height: 100%;
+    width: 260px;
+    background-image: url(../img/leafright.svg);
+    background-repeat: no-repeat;
+
+    position: absolute;
+    top: 0%;
+    right: -120px;
 }
 
 .small-cards .card {
@@ -609,6 +655,10 @@ header {
     align-items: center;
 }
 
+.medium-cards {
+    margin-top: -290px;
+}
+
 .medium-card {
     background-repeat: no-repeat;
     background-size: cover;
@@ -731,13 +781,11 @@ header {
 
 .big-card .swiper .swiper-button-prev-unique {
     background-color: #111111;
-    border-radius: 4px;
     background-image: url(../img/arrow-long-right-white.svg);
 }
 
 .big-card .swiper .swiper-button-next-unique {
     background-color: #111111;
-    border-radius: 4px;
     background-image: url(../img/arrow-long-right-white.svg);
 }
 
@@ -1050,9 +1098,40 @@ header {
 
 /* Footer */
 footer {
-    max-width: 1200px;
     width: 100%;
     margin: 130px auto 20px;
+    overflow: hidden;
+
+    position: relative;
+}
+
+.footer {
+    max-width: 1186px;
+    width: 100%;
+    margin: 70px auto 0;
+    z-index: 5;
+}
+
+footer .footer-leaf-left {
+    height: 100%;
+    width: 260px;
+    background-image: url(../img/leafleft.svg);
+    background-repeat: no-repeat;
+
+    position: absolute;
+    top: 40%;
+    left: -70px;
+}
+
+footer .footer-leaf-right {
+    height: 100%;
+    width: 260px;
+    background-image: url(../img/leafright.svg);
+    background-repeat: no-repeat;
+
+    position: absolute;
+    top: -1%;
+    right: -120px;
 }
 
 .footer-row {
