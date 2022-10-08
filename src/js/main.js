@@ -22,17 +22,20 @@ function navClose() {
 }
 btnClose.addEventListener("click", navClose);
 
-// // Click outside nav menu to close
-// window.addEventListener("click", function (e) {
-//   if (
-//     menuActive.contains(e.target) ||
-//     navBar.contains(e.target) ||
-//     menuActive.style.zIndex === "-99"
-//   ) {
-//   } else {
-//     navClose();
-//   }
-// });
+// Click outside nav menu to close
+window.addEventListener("click", function (e) {
+  if (menuActive.contains(e.target) || navBar.contains(e.target)) {
+  } else {
+    isNavbarOpen();
+  }
+});
+
+function isNavbarOpen() {
+  if (menuActive.style.height === "700px") {
+    navClose();
+  }
+  return;
+}
 
 //Big slider
 var swiper1 = new Swiper(".big-slider .swiper", {
@@ -91,26 +94,26 @@ var swiper4 = new Swiper(".big-card .swiper", {
 });
 
 //Product weight/price selector
-const prices = document.querySelectorAll(".priceA .price");
-const weights = document.querySelectorAll(".wgtA .weight");
+const prices = document.querySelectorAll(".price");
+const weights = document.querySelectorAll(".weight");
 
-const changePrice = (n) => {
+const changePrice = (item) => {
   for (price of prices) {
     price.classList.remove("active");
   }
-  prices[n].classList.add("active");
+  prices[item].classList.add("active");
 };
 
-const changeWeight = (n) => {
+const changeWeight = (item) => {
   for (weight of weights) {
     weight.classList.remove("active");
   }
-  weights[n].classList.add("active");
+  weights[item].classList.add("active");
 };
 
-weights.forEach((slide, iDot) => {
+weights.forEach((slide, item) => {
   slide.addEventListener("click", () => {
-    i = iDot;
+    i = item;
     changeWeight(i);
     changePrice(i);
   });
