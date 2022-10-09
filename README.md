@@ -1,13 +1,18 @@
-### Name
+#### Name
 
 - Zootopia
 
-### Links
+#### Description
 
-- https://mmeskhi.github.io/Zootopia
+- Fully responsive
+- Pet shop
 
-### Built with
+#### Built with
 
 - HTML5
 - CSS
 - JavaScript
+
+#### Links
+
+- https://mmeskhi.github.io/Zootopia
