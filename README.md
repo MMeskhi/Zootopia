@@ -2,6 +2,11 @@
 
 - Zootopia
 
+### Description
+
+- Fully responsive
+- Pet shop
+
 ### Links
 
 - https://mmeskhi.github.io/Zootopia
