@@ -1,6 +1,6 @@
 @media all and (max-width: 1225px) {
     .navbar {
-        width: 95%;
+        width: 90%;
     }
 
     .menu-active {
@@ -12,7 +12,7 @@
     }
 
     .container {
-        width: 95%;
+        width: 90%;
     }
 
     .swiper {
@@ -20,11 +20,23 @@
     }
 
     .footer {
-        width: 95%;
+        width: 90%;
     }
 
     .small-cards {
         justify-content: center;
+    }
+
+    .top-products .swiper-button-next {
+        display: none;
+    }
+
+    .top-products .swiper-button-prev {
+        display: none;
+    }
+
+    .section-head {
+        width: 90%;
     }
 }
 
@@ -74,6 +86,22 @@
     .big-cards .a {
         display: none;
     }
+
+    .footer .footer-about {
+        display: none;
+    }
+
+    .contact-cont {
+        flex-direction: column;
+    }
+
+    .contact-cont iframe {
+        margin-bottom: 60px;
+    }
+
+    .contact-cont ul li {
+        white-space: unset;
+    }
 }
 
 
@@ -107,23 +135,61 @@
     }
 
     .footer-row {
-        flex-wrap: wrap;
         gap: 30px 20px;
     }
 
     .footer-about {
         max-width: 250px;
     }
+
+    .footer-bottom {
+        flex-direction: column;
+        margin-top: 80px;
+    }
+
+    .footer-bottom .prot, .banks {
+        display: none !important;
+    }
 }
 
-@media all and (max-width: 480px) {
+@media all and (max-width: 700px) {
+    .footer {
+        margin: 0 auto;
+    }
+
+    .card-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1f;
+        gap: 15px 15px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "card-a"
+            "card-b"
+            "card-c"
+            "card-d";
+    }
+
     .footer-row {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    .footer-col {
-        margin-right: 0 !important;
+    .footer-col:not(:last-child) {
+        margin-right: 0px;
+    }
+}
+
+@media all and (max-width: 480px) {
+    .navbar {
+        justify-content: center;
+        padding: 0;
+        position: absolute;
+        height: 80px;
+    }
+
+    .srch-cart-login {
+        display: none;
     }
 }

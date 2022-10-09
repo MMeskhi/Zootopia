@@ -1157,7 +1157,7 @@ footer .footer-leaf-right {
 
 .footer-about {
     max-width: 378px;
-    width: 100%;
+    width: 100% !important;
 }
 
 .footer-about img {
@@ -1207,6 +1207,11 @@ footer .footer-leaf-right {
     opacity: 80%;
 }
 
+.footer-col {
+    width: 170px;
+    z-index: 2;
+}
+
 .footer-col:not(:last-child) {
     margin-right: 40px;
 }
@@ -1245,12 +1250,12 @@ footer .footer-leaf-right {
     font-size: 14px;
 }
 
-.footer-bottom .smartweb span {
+.footer-bottom .madeby span {
     color: #111111;
     font-size: 14px;
 }
 
-.footer-bottom .smartweb .sw {
+.footer-bottom .madeby .sw {
     color: #74B42C;
 }
 
