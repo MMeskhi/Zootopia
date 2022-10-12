@@ -197,11 +197,19 @@
 }
 
 @media all and (max-width: 480px) {
+    header {
+        margin-bottom: 120px;
+    }
+
     .navbar {
         justify-content: center;
         padding: 0;
         position: absolute;
         height: 80px;
+    }
+
+    .navbar .logo {
+        margin-bottom: 0px;
     }
 
     .srch-cart-login {
