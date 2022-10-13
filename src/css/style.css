@@ -453,6 +453,10 @@ hr {
     margin-bottom: 10px;
 }
 
+.menu-mobile-active .mobile-pgs .main-b {
+    color: #74B42C;
+}
+
 /* Sections */
 .container {
     max-width: 1186px;
