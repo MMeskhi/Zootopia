@@ -104,10 +104,32 @@
     }
 }
 
-
-@media all and (max-width: 768px) {
+@media all and (max-width: 700px) {
     .hamburger {
         display: none;
+    }
+
+    .container h3 {
+        font-size: 18px;
+        padding-left: 10px;
+    }
+
+    .bg-cont {
+        padding-top: 80px;
+    }
+
+    .bg-cont button {
+        margin-top: 30px;
+    }
+
+    .bg-cont h2 {
+        font-size: 18px;
+        font-weight: lighter;
+        width: 250px;
+    }
+
+    #bgC {
+        background-position-y: -250%;
     }
 
     .big-cards .a {
@@ -136,40 +158,37 @@
         font-size: 24px;
     }
 
-    .footer-row {
-        gap: 30px 20px;
+    .swiper-horizontal>.swiper-pagination-progressbar, .swiper-pagination-progressbar.swiper-pagination-horizontal {
+        display: block;
     }
 
-    .footer-about {
-        max-width: 250px;
+    .swiper-pagination2,
+    .swiper-pagination3 {
+        left: 90% !important;
+    }
+
+    footer {
+        margin: 0px auto 20px;
+    }
+
+    .footer-cont {
+        display: none;
     }
 
     .footer-bottom {
-        flex-direction: column;
-        margin-top: 80px;
+        margin-top: 0px;
     }
 
-    .footer-bottom .prot, .banks {
-        display: none !important;
-    }
-}
-
-@media all and (max-width: 700px) {
-    .bg-cont {
-        padding: 50px;
+    .footer-bottom {
+        flex-direction: column-reverse;
     }
 
-    .bg-cont button {
-        margin-top: 30px;
+    .footer-bottom .madeby {
+        margin-bottom: 8px;
     }
 
-    .bg-cont h2 {
-        font-size: 20px;
-        width: 250px;
-    }
-
-    .footer {
-        margin: 0 auto;
+    .footer-bottom .banks {
+        margin-bottom: 80px;
     }
 
     .card-grid {
@@ -184,19 +203,17 @@
             "card-c"
             "card-d";
     }
-
-    .footer-row {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .footer-col:not(:last-child) {
-        margin-right: 0px;
-    }
 }
 
 @media all and (max-width: 480px) {
+    .container {
+        margin: 30px auto;
+    }
+
+    .leaf-section {
+        margin-top: -360px;
+    }
+
     header {
         margin-bottom: 120px;
     }
@@ -206,6 +223,8 @@
         padding: 0;
         position: absolute;
         height: 80px;
+        width: 100%;
+        border-radius: 0px 0px 30px 30px;
     }
 
     .navbar .logo {
@@ -214,5 +233,28 @@
 
     .srch-cart-login {
         display: none;
+    }
+
+    header {
+        margin-bottom: -18px;
+    }
+
+    .big-slider {
+        width: 100%;
+    }
+
+    .swiper {
+        width: 100% !important;
+        border-radius: 0px 0px 10px 10px !important;
+    }
+
+    .big-slider .swiper-button-prev-unique,
+    .big-slider .swiper-button-next-unique {
+        display: none;
+    }
+
+    .swiper-pagination2,
+    .swiper-pagination3 {
+        left: 80% !important;
     }
 }

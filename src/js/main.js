@@ -67,6 +67,11 @@ const productSlider = new Swiper(".top-products .swiper", {
     disableOnInteraction: false,
   },
 
+  pagination: {
+    el: ".swiper-pagination.swiper-pagination2",
+    type: "progressbar",
+  },
+
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -101,6 +106,11 @@ const brandSlider = new Swiper(".brands .swiper", {
   autoplay: {
     delay: 2000,
     disableOnInteraction: false,
+  },
+
+  pagination: {
+    el: ".swiper-pagination.swiper-pagination3",
+    type: "progressbar",
   },
 
   breakpoints: {

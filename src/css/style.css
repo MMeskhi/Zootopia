@@ -1113,6 +1113,10 @@ header {
     filter: grayscale(80%);
 }
 
+.brands {
+    position: relative;
+}
+
 .brands .swiper {
     height: 90px;
     width: 100%;
@@ -1140,6 +1144,28 @@ header {
 
 .brands .swiper-slide img {
     width: 96px;
+}
+
+.brands .swiper-slide img {
+    width: 96px;
+}
+
+.swiper-horizontal>.swiper-pagination-progressbar, .swiper-pagination-progressbar.swiper-pagination-horizontal {
+    display: none;
+    width: 52px !important;
+    height: 11px !important;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: #e7e7e7;
+}
+
+.swiper-pagination2,
+.swiper-pagination3 {
+    top: 8px !important;
+}
+
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    background: #74B42C !important;
 }
 
 /* Footer */
