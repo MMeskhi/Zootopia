@@ -105,6 +105,10 @@
 }
 
 @media all and (max-width: 700px) {
+    .menu-mobile {
+        display: flex;
+    }
+
     .hamburger {
         display: none;
     }
@@ -155,7 +159,8 @@
     }
 
     .large-card .card h5 {
-        font-size: 24px;
+        font-size: 18px;
+        text-align: center;
     }
 
     .swiper-horizontal>.swiper-pagination-progressbar, .swiper-pagination-progressbar.swiper-pagination-horizontal {
@@ -176,11 +181,8 @@
     }
 
     .footer-bottom {
-        margin-top: 0px;
-    }
-
-    .footer-bottom {
         flex-direction: column-reverse;
+        margin: 0px 0 60px 0;
     }
 
     .footer-bottom .madeby {
@@ -214,10 +216,6 @@
         margin-top: -360px;
     }
 
-    header {
-        margin-bottom: 120px;
-    }
-
     .navbar {
         justify-content: center;
         padding: 0;
@@ -236,7 +234,7 @@
     }
 
     header {
-        margin-bottom: -18px;
+        margin-bottom: 50px;
     }
 
     .big-slider {

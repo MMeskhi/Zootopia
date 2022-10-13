@@ -1,4 +1,4 @@
-//Menu open close
+//Menu open/close
 const btnOpen = document.getElementById("hamburger");
 const btnClose = document.getElementById("hamburgerCat");
 const navBar = document.querySelector(".navbar");
@@ -35,6 +35,39 @@ function isNavbarOpen() {
     navClose();
   }
   return;
+}
+
+//Mobile Menu open/close
+const mobileBtnOpen = document.getElementById("mobileHamburger");
+const mobileBtnClose = document.getElementById("mobileCat");
+const mobileMenu = document.querySelector(".menu-mobile-active");
+
+function mobileNavOpen() {
+  mobileBtnOpen.classList.toggle("is-active");
+  mobileBtnClose.style.opacity = "1";
+  mobileBtnClose.style.zIndex = "10";
+  mobileMenu.style.opacity = "1";
+  mobileMenu.style.zIndex = "90";
+  mobileMenu.style.height = "100%";
+  document.body.style.overflow = "hidden";
+  topFunction();
+}
+mobileBtnOpen.addEventListener("click", mobileNavOpen);
+
+function mobileNavClose() {
+  mobileBtnOpen.classList.toggle("is-active");
+  mobileBtnClose.style.opacity = "";
+  mobileBtnClose.style.zIndex = "";
+  mobileMenu.style.opacity = "";
+  mobileMenu.style.zIndex = "-99";
+  mobileMenu.style.height = "";
+  document.body.style.overflow = "";
+}
+mobileBtnClose.addEventListener("click", mobileNavClose);
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 }
 
 //Big slider
