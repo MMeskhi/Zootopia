@@ -75,7 +75,7 @@ const weightsBtns = document.querySelectorAll(".weight");
 
 weightsBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
-    const parentSlide = btn.closest(".swiper-slide");
+    const parentSlide = btn.closest(".swiper-slide, .product");
     const priceBlock = parentSlide.querySelector(".price");
     const weightBlock = parentSlide.querySelectorAll(".weight");
     const price = btn.dataset.price;
@@ -89,3 +89,70 @@ weightsBtns.forEach((btn) => {
     changePrice(btn);
   });
 });
+
+///Product page
+//Product image selector
+const mainProductImage = document.querySelector(".product-main-img img");
+
+window.onload = function () {
+  const anchors = document.querySelectorAll(".product-select img");
+  for (let i = 0; i < anchors.length; i++) {
+    const anchor = anchors[i];
+    anchor.onclick = function () {
+      changeProductImage(this);
+    };
+  }
+};
+
+function changeProductImage(selectProductImage) {
+  mainProductImage.src = selectProductImage.src;
+}
+
+//Quantity selector
+const quantMinus = document.querySelector(".minus");
+const quantPlus = document.querySelector(".plus");
+
+function updateQuantity(isIncreasing) {
+  const inputField = document.getElementById("quant");
+  let quantity = inputField.value;
+  if (isIncreasing == true) {
+    quantity = parseInt(quantity) + 1;
+  } else if (quantity > 1) {
+    quantity = parseInt(quantity) - 1;
+  }
+  inputField.value = quantity;
+}
+
+function quantDecrease() {
+  updateQuantity(false);
+}
+function quantIncrease() {
+  updateQuantity(true);
+}
+
+//Product about see more/less
+const productAboutMore = document.querySelector(
+  ".product .product-about .text"
+);
+const seeMore = document.querySelector(".see-more");
+const seeLess = document.querySelector(".see-less");
+
+function showMoreAbout() {
+  productAboutMore.style.height = "430px";
+  seeMore.style.display = "none";
+  seeLess.style.display = "flex";
+}
+
+function showLessAbout() {
+  productAboutMore.style.height = "";
+  seeMore.style.display = "";
+  seeLess.style.display = "";
+}
+
+//If on product page event listeners
+if (document.getElementById("product")) {
+  quantMinus.addEventListener("click", quantDecrease);
+  quantPlus.addEventListener("click", quantIncrease);
+  seeMore.addEventListener("click", showMoreAbout);
+  seeLess.addEventListener("click", showLessAbout);
+}

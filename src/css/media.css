@@ -15,6 +15,10 @@
         width: 90%;
     }
 
+    .container-b {
+        width: 90%;
+    }
+
     .swiper {
         width: 95% !important;
     }
@@ -35,8 +39,27 @@
         display: none;
     }
 
-    .section-head {
-        width: 90%;
+    .product .product-img-gallery {
+        flex-direction: column-reverse;
+    }
+
+    .product .product-main-img {
+        margin-left: 0px;
+    }
+
+    .product .product-img-selector {
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-top: 20px;
+    }
+
+    .product .product-img-selector .product-select:not(:last-child) {
+        margin-bottom: 0;
+        margin-right: 10px;
+    }
+
+    .product .wgt {
+        grid-template-columns: repeat(2, 2fr);
     }
 }
 
@@ -101,6 +124,29 @@
 
     .contact-cont ul li {
         white-space: unset;
+    }
+
+    .product {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .product .product-img-selector {
+        margin-bottom: 30px;
+    }
+
+    .product .description {
+        margin-bottom: 30px;
+    }
+
+    .product .product-images {
+        width: 100%;
+    }
+
+    .product .product-main-img {
+        width: 100%;
     }
 }
 
@@ -212,6 +258,10 @@
         margin: 30px auto;
     }
 
+    .section-head {
+        display: none;
+    }
+
     .leaf-section {
         margin-top: -360px;
     }
@@ -254,5 +304,9 @@
     .swiper-pagination2,
     .swiper-pagination3 {
         left: 80% !important;
+    }
+
+    .aboutus-section, .contact-section, .product-cont {
+        margin-top: 100px;
     }
 }
