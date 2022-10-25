@@ -75,7 +75,9 @@ const weightsBtns = document.querySelectorAll(".weight");
 
 weightsBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
-    const parentSlide = btn.closest(".swiper-slide, .product");
+    const parentSlide = btn.closest(
+      ".swiper-slide, .listing-product, .product"
+    );
     const priceBlock = parentSlide.querySelector(".price");
     const weightBlock = parentSlide.querySelectorAll(".weight");
     const price = btn.dataset.price;
@@ -138,13 +140,13 @@ const seeMore = document.querySelector(".see-more");
 const seeLess = document.querySelector(".see-less");
 
 function showMoreAbout() {
-  productAboutMore.style.height = "430px";
+  productAboutMore.style.maxHeight = "100rem";
   seeMore.style.display = "none";
   seeLess.style.display = "flex";
 }
 
 function showLessAbout() {
-  productAboutMore.style.height = "";
+  productAboutMore.style.maxHeight = "";
   seeMore.style.display = "";
   seeLess.style.display = "";
 }
