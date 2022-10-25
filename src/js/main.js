@@ -158,3 +158,46 @@ if (document.getElementById("product")) {
   seeMore.addEventListener("click", showMoreAbout);
   seeLess.addEventListener("click", showLessAbout);
 }
+
+///Product listing page
+//Listing cat-menu toggler
+const filterBtns = document.querySelectorAll(".filter-btn");
+
+filterBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const parentFilter = btn.closest(".filter-select");
+    const filterOpen = parentFilter.querySelector(".open-filter");
+    const filterBtn = parentFilter.querySelector(".filter-btn");
+    const filterToggle = () => {
+      filterOpen.classList.toggle("closed");
+      filterBtn.classList.toggle("active");
+    };
+    filterToggle(btn);
+  });
+});
+
+const filterCategories = document.querySelectorAll(".filter-cat");
+
+filterCategories.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const parentCategory = btn.closest(".filter-cat");
+    const categoryBox = parentCategory.querySelector(".box");
+    const boxToggle = () => {
+      categoryBox.classList.toggle("active");
+    };
+    boxToggle(btn);
+  });
+});
+
+//Product filter slide on mobile
+const categoryBox = document.querySelector(".product-filter");
+const categoryBtn = document.querySelector(".product-filter-mobile");
+
+function slideCategoryBoxInOut() {
+  categoryBox.classList.toggle("slide-in-out");
+  categoryBtn.classList.toggle("active");
+}
+
+if (document.getElementById("listing")) {
+  categoryBtn.addEventListener("click", slideCategoryBoxInOut);
+}

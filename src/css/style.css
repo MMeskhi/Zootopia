@@ -1446,7 +1446,7 @@ footer .footer-leaf-right {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 190px;
+    margin-top: 170px;
 }
 
 .footer-bottom span {
@@ -1849,18 +1849,18 @@ footer .footer-leaf-right {
     justify-content: space-between;
 }
 
-.section-head .sort span {
+#listing .sort span {
     font-size: 14px;
     color: #111111;
 }
 
-.section-head .sort select {
+#listing .sort select {
     font-size: 14px;
     color: #F5621F;
     cursor: pointer;
     background-color: inherit;
     -webkit-appearance: button;
-    -webkit-border-radius: 2px;
+    -webkit-border-radius: 4px;
     -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
     -webkit-padding-end: 20px;
     -webkit-padding-start: 2px;
@@ -1872,9 +1872,10 @@ footer .footer-leaf-right {
     padding-bottom: 2px;
     text-overflow: ellipsis;
     white-space: nowrap;
+    font-family: "FiraGO Medium";
 }
 
-.section-head .sort select:focus-visible {
+#listing .sort select:focus-visible {
     outline: -webkit-focus-ring-color auto 0px;
 }
 
@@ -1888,6 +1889,10 @@ footer .footer-leaf-right {
     margin-top: 100px;
 }
 
+.filter-mobile-display {
+    display: none;
+}
+
 .product-filter {
     width: 277px;
     height: 100%;
@@ -1898,7 +1903,10 @@ footer .footer-leaf-right {
 }
 
 .product-filter .filter-select {
-    margin-bottom: 50px;
+    margin-bottom: 35px;
+    padding: 15px 0 10px 0;
+    border-top: solid 1px rgba(231, 231, 231, 0.3);
+    border-bottom: solid 1px rgba(231, 231, 231, 0.3);
 }
 
 .product-filter .filter-select .filter-btn {
@@ -1926,6 +1934,52 @@ footer .footer-leaf-right {
 
 .product-filter button:hover {
     filter: grayscale(50%);
+}
+
+.filter-select .open-filter {
+    margin: 15px 0 0 15px;
+    max-height: 200px;
+    height: 100%;
+    transition: all 0.3s cubic-bezier(1, 0, 0, 1.02);
+}
+
+.filter-btn .filter-chevron-down {
+    transition: all 0.5s ease;
+}
+
+.filter-btn.active .filter-chevron-down {
+    transform: translateY(-40%) rotate(180deg);
+}
+
+.filter-select .closed {
+    max-height: 0px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+}
+
+.filter-select .filter-cat {
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.filter-select .filter-cat:hover .box {
+    background-color: rgb(116, 180, 44, 50%);
+}
+
+.filter-select .filter-cat .box {
+    height: 17px;
+    width: 17px;
+    margin-right: 10px;
+    background-color: #E7E7E7;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.filter-select .filter-cat .active {
+    background-color: #74B42C;
 }
 
 .product-list {

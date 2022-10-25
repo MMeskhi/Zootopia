@@ -254,118 +254,364 @@
             </div>
         </div>
 
+        <div class="filter-mobile-display">
+            <div class="sort mobile-display">
+                <select>
+                    <option>ფასის ზრდის</option>
+                    <option>ფასის კლებადობის</option>
+                    <option>დასახელება: A-Z</option>
+                    <option>დასახელება: Z-A</option>
+                </select>
+            </div>
+
+            <div class="product-filter-mobile ">
+                <span>გაფილტვრა</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="15">
+                    <g data-name="Layer 2">
+                        <g data-name="Layer 1">
+                            <path data-name="Path 10294"
+                                d="M12.919.56a.905.905 0 0 0-.837-.56H.932a.921.921 0 0 0-.656 1.579l2.361 2.342a5.954 5.954 0 0 1 1.729 4.21L4.34 14.6a.4.4 0 0 0 .194.342.411.411 0 0 0 .2.053.4.4 0 0 0 .194-.053l3.673-2.105a.39.39 0 0 0 .2-.342V8.047a5.907 5.907 0 0 1 1.648-4.1l2.285-2.368A.91.91 0 0 0 12.919.56Z"
+                                fill="#c8c8c8" />
+                        </g>
+                    </g>
+                </svg>
+            </div>
+        </div>
+
         <div class="leaf-section">
             <div class="section-leaf-left"></div>
             <div class="section-leaf-right"></div>
         </div>
 
         <div class="product-listing container-b">
-            <div class="product-filter">
+            <div class="product-filter slide-in-out">
                 <div class="filter-select">
                     <div class="filter-btn active">
                         <h4>ფასი</h4>
-                        <img src="src/img/chevron-down.svg" alt="">
+                        <img class="filter-chevron-down" src="src/img/chevron-down.svg" alt="">
                     </div>
                     <div class="price-range open-filter">
 
                     </div>
                 </div>
                 <div class="filter-select">
-                    <div class="filter-btn">
-                        <h4>ბრენდი</h4>
-                        <img src="src/img/chevron-down.svg" alt="">
+                    <div class="filter-btn active">
+                        <h4>ასაკი</h4>
+                        <img class="filter-chevron-down" src="src/img/chevron-down.svg" alt="">
                     </div>
                     <div class="open-filter">
-
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>ახალდაბადებული</span>
+                        </div>
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>პატარა</span>
+                        </div>
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>ზრდასრული</span>
+                        </div>
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>ხნიერი</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-select">
+                    <div class="filter-btn active">
+                        <h4>ცხოველის სახეობა</h4>
+                        <img class="filter-chevron-down" src="src/img/chevron-down.svg" alt="">
+                    </div>
+                    <div class="open-filter">
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>კატა</span>
+                        </div>
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>ძაღლი</span>
+                        </div>
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>კურდღელი</span>
+                        </div>
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>კუ</span>
+                        </div>
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>თევზი</span>
+                        </div>
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>თუთიყურში</span>
+                        </div>
                     </div>
                 </div>
                 <div class="filter-select">
                     <div class="filter-btn">
-                        <h4>სახეობა</h4>
-                        <img src="src/img/chevron-down.svg" alt="">
+                        <h4>ბრენდი</h4>
+                        <img class="filter-chevron-down" src="src/img/chevron-down.svg" alt="">
                     </div>
-                    <div class="open-filter">
+                    <div class="open-filter closed">
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>ბრენდი 1</span>
+                        </div>
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>ბრენდი 2</span>
+                        </div>
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>ბრენდი 3</span>
+                        </div>
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>ბრენდი 4</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-select">
+                    <div class="filter-btn">
+                        <h4>მასალა</h4>
+                        <img class="filter-chevron-down" src="src/img/chevron-down.svg" alt="">
+                    </div>
+                    <div class="open-filter closed">
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>მასალა 1</span>
+                        </div>
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>მასალა 2</span>
+                        </div>
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>მასალა 3</span>
+                        </div>
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>მასალა 4</span>
+                        </div>
                     </div>
                 </div>
                 <div class="filter-select">
                     <div class="filter-btn">
                         <h4>ჯიში</h4>
-                        <img src="src/img/chevron-down.svg" alt="">
+                        <img class="filter-chevron-down" src="src/img/chevron-down.svg" alt="">
                     </div>
-                    <div class="open-filter">
-
-                    </div>
-                </div>
-                <div class="filter-select">
-                    <div class="filter-btn">
-                        <h4>ასაკი</h4>
-                        <img src="src/img/chevron-down.svg" alt="">
-                    </div>
-                    <div class="open-filter">
-
+                    <div class="open-filter closed">
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>ჯიში 1</span>
+                        </div>
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>ჯიში 2</span>
+                        </div>
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>ჯიში 3</span>
+                        </div>
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>ჯიში 4</span>
+                        </div>
                     </div>
                 </div>
                 <div class="filter-select">
                     <div class="filter-btn">
                         <h4>საკვების კლასი</h4>
-                        <img src="src/img/chevron-down.svg" alt="">
+                        <img class="filter-chevron-down" src="src/img/chevron-down.svg" alt="">
                     </div>
-                    <div class="open-filter">
-
+                    <div class="open-filter closed">
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>საკვების კლასი 1</span>
+                        </div>
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>საკვების კლასი 2</span>
+                        </div>
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>საკვების კლასი 3</span>
+                        </div>
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>საკვების კლასი 4</span>
+                        </div>
                     </div>
                 </div>
                 <div class="filter-select">
                     <div class="filter-btn">
                         <h4>გემო</h4>
-                        <img src="src/img/chevron-down.svg" alt="">
+                        <img class="filter-chevron-down" src="src/img/chevron-down.svg" alt="">
                     </div>
-                    <div class="open-filter">
-
+                    <div class="open-filter closed">
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>გემო 1</span>
+                        </div>
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>გემო 2</span>
+                        </div>
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>გემო 3</span>
+                        </div>
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>გემო 4</span>
+                        </div>
                     </div>
                 </div>
                 <div class="filter-select">
                     <div class="filter-btn">
                         <h4>ზომა</h4>
-                        <img src="src/img/chevron-down.svg" alt="">
+                        <img class="filter-chevron-down" src="src/img/chevron-down.svg" alt="">
                     </div>
-                    <div class="open-filter">
-
+                    <div class="open-filter closed">
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>ზომა 1</span>
+                        </div>
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>ზომა 2</span>
+                        </div>
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>ზომა 3</span>
+                        </div>
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>ზომა 4</span>
+                        </div>
                     </div>
                 </div>
                 <div class="filter-select">
                     <div class="filter-btn">
-                        <h4>ქვეკატეგორია</h4>
-                        <img src="src/img/chevron-down.svg" alt="">
+                        <h4>ფორმა</h4>
+                        <img class="filter-chevron-down" src="src/img/chevron-down.svg" alt="">
                     </div>
-                    <div class="open-filter">
-
+                    <div class="open-filter closed">
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>ფორმა 1</span>
+                        </div>
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>ფორმა 2</span>
+                        </div>
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>ფორმა 3</span>
+                        </div>
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>ფორმა 4</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-select">
+                    <div class="filter-btn">
+                        <h4>წონა</h4>
+                        <img class="filter-chevron-down" src="src/img/chevron-down.svg" alt="">
+                    </div>
+                    <div class="open-filter closed">
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>წონა 1</span>
+                        </div>
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>წონა 2</span>
+                        </div>
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>წონა 3</span>
+                        </div>
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>წონა 4</span>
+                        </div>
                     </div>
                 </div>
                 <div class="filter-select">
                     <div class="filter-btn">
                         <h4>ოჯახი</h4>
-                        <img src="src/img/chevron-down.svg" alt="">
+                        <img class="filter-chevron-down" src="src/img/chevron-down.svg" alt="">
                     </div>
-                    <div class="open-filter">
-
+                    <div class="open-filter closed">
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>ოჯახი 1</span>
+                        </div>
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>ოჯახი 2</span>
+                        </div>
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>ოჯახი 3</span>
+                        </div>
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>ოჯახი 4</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-select">
+                    <div class="filter-btn">
+                        <h4>ხასიათი</h4>
+                        <img class="filter-chevron-down" src="src/img/chevron-down.svg" alt="">
+                    </div>
+                    <div class="open-filter closed">
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>ხასიათი 1</span>
+                        </div>
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>ხასიათი 2</span>
+                        </div>
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>ხასიათი 3</span>
+                        </div>
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>ხასიათი 4</span>
+                        </div>
                     </div>
                 </div>
                 <div class="filter-select">
                     <div class="filter-btn">
                         <h4>წყლის ტემპერატურა</h4>
-                        <img src="src/img/chevron-down.svg" alt="">
+                        <img class="filter-chevron-down" src="src/img/chevron-down.svg" alt="">
                     </div>
-                    <div class="open-filter">
-
-                    </div>
-                </div>
-                <div class="filter-select">
-                    <div class="filter-btn">
-                        <h4>გრამაჟი</h4>
-                        <img src="src/img/chevron-down.svg" alt="">
-                    </div>
-                    <div class="open-filter">
-
+                    <div class="open-filter closed">
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>წყლის ტემპერატურა 1</span>
+                        </div>
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>წყლის ტემპერატურა 2</span>
+                        </div>
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>წყლის ტემპერატურა 3</span>
+                        </div>
+                        <div class="filter-cat">
+                            <div class="box"></div>
+                            <span>წყლის ტემპერატურა 4</span>
+                        </div>
                     </div>
                 </div>
                 <button class="filter-button" type="submit">გაფილტვრა</button>

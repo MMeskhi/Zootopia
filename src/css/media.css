@@ -61,6 +61,10 @@
     .product .wgt {
         grid-template-columns: repeat(2, 2fr);
     }
+
+    .product-listing-cont {
+        margin-bottom: 150px;
+    }
 }
 
 @media all and (max-width: 1024px) {
@@ -251,6 +255,78 @@
             "card-c"
             "card-d";
     }
+
+    .product-filter {
+        width: 90%;
+        box-shadow: 0px 0px 60px #597dbc33;
+        z-index: 5;
+        height: auto;
+        transition: all 0.5s ease;
+        left: 50%;
+        transform: translate(-50%);
+
+        position: absolute;
+    }
+
+    .product-listing .slide-in-out {
+        left: -3000px;
+    }
+
+    #listing .section-head {
+        display: none;
+    }
+
+    .filter-mobile-display {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #listing .sort select {
+        height: 40px;
+        width: 200px;
+        font-size: 16px;
+        padding: 7px;
+        background-color: #ffffff;
+        color: #111111;
+    }
+
+    #listing .sort select:focus-visible {
+        outline: 1px solid red;
+        color: red;
+    }
+
+    .filter-mobile-display .product-filter-mobile {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #ffffff;
+        border: 1px solid #AAA;
+        height: 40px;
+        width: 200px;
+        font-size: 16px;
+        margin-top: 15px;
+        transition: all 0.3s ease;
+        opacity: 100%;
+        color: #111111;
+        border: 1px solid #AAA;
+    }
+
+    .filter-mobile-display .active {
+        opacity: 80%;
+        color: red;
+        border: 1px solid red;
+    }
+
+    .filter-mobile-display .product-filter-mobile.active path {
+        fill: #f5621f;
+        transition: all 0.3s ease;
+    }
+
+    .product-list {
+        justify-content: center;
+    }
 }
 
 @media all and (max-width: 480px) {
@@ -308,5 +384,9 @@
 
     .aboutus-section, .contact-section, .product-cont {
         margin-top: 100px;
+    }
+
+    .product-listing-cont {
+        margin-top: 140px;
     }
 }
