@@ -1937,7 +1937,7 @@ footer .footer-leaf-right {
 }
 
 .filter-select .open-filter {
-    margin: 15px 0 0 15px;
+    margin: 15px 0 0 10px;
     max-height: 200px;
     height: 100%;
     transition: all 0.3s cubic-bezier(1, 0, 0, 1.02);
@@ -1966,7 +1966,7 @@ footer .footer-leaf-right {
 }
 
 .filter-select .filter-cat:hover .box {
-    background-color: rgb(116, 180, 44, 50%);
+    background-color: rgb(116, 180, 44, 30%);
 }
 
 .filter-select .filter-cat .box {
@@ -1979,7 +1979,7 @@ footer .footer-leaf-right {
 }
 
 .filter-select .filter-cat .active {
-    background-color: #74B42C;
+    background-color: #74B42C !important;
 }
 
 .product-list {
@@ -2092,4 +2092,85 @@ footer .footer-leaf-right {
 
 .product-list .listing-product .price-basket .basket:hover {
     filter: grayscale(80%);
+}
+
+.filter-select .price-range {
+    margin: 30px 0 10px 0;
+}
+
+.filter-select .price-input {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.filter-select .field input {
+    width: 85px;
+    height: 30px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    font-size: 13px;
+    margin-left: 12px;
+    text-align: center;
+    background-color: #E7E7E7;
+    -moz-appearance: textfield;
+}
+
+.filter-select input[type="number"]::-webkit-outer-spin-button,
+.filter-select input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.filter-select .slider {
+    height: 7px;
+    position: relative;
+    background: #E7E7E7;
+    border-radius: 109px;
+}
+
+.filter-select .slider .progress {
+    height: 7px;
+    left: 20%;
+    right: 20%;
+    position: absolute;
+    border-radius: 109px;
+    background: #74B42C;
+}
+
+.filter-select .range-input {
+    position: relative;
+}
+
+.filter-select .range-input input {
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    top: -6px;
+    background: none;
+    pointer-events: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.filter-select input[type="range"]::-webkit-slider-thumb {
+    height: 19px;
+    width: 19px;
+    border-radius: 50%;
+    background: #74B42C;
+    pointer-events: auto;
+    -webkit-appearance: none;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+
+.filter-select input[type="range"]::-moz-range-thumb {
+    height: 19px;
+    width: 19px;
+    border: none;
+    border-radius: 50%;
+    background: #74B42C;
+    pointer-events: auto;
+    -moz-appearance: none;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
 }
