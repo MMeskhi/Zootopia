@@ -93,23 +93,6 @@ weightsBtns.forEach((btn) => {
 });
 
 ///Product page
-//Product image selector
-const mainProductImage = document.querySelector(".product-main-img img");
-
-window.onload = function () {
-  const anchors = document.querySelectorAll(".product-select img");
-  for (let i = 0; i < anchors.length; i++) {
-    const anchor = anchors[i];
-    anchor.onclick = function () {
-      changeProductImage(this);
-    };
-  }
-};
-
-function changeProductImage(selectProductImage) {
-  mainProductImage.src = selectProductImage.src;
-}
-
 //Quantity selector
 const quantMinus = document.querySelector(".minus");
 const quantPlus = document.querySelector(".plus");
@@ -151,12 +134,31 @@ function showLessAbout() {
   seeLess.style.display = "";
 }
 
-//If on product page event listeners
+//If on product page
+//Product image selector swiper
 if (document.getElementById("product")) {
   quantMinus.addEventListener("click", quantDecrease);
   quantPlus.addEventListener("click", quantIncrease);
   seeMore.addEventListener("click", showMoreAbout);
   seeLess.addEventListener("click", showLessAbout);
+
+  const selectorImgs = new Swiper(".product-img-selector", {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+
+    breakpoints: {
+      1225: {
+        direction: "vertical",
+      },
+    },
+  });
+  const mainImg = new Swiper(".product-main-img", {
+    spaceBetween: 10,
+    thumbs: {
+      swiper: selectorImgs,
+    },
+  });
 }
 
 ///Product listing page

@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="src/css/media.css">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
     <title>პროდუქტი</title>
 </head>
 
@@ -248,22 +250,37 @@
         <div class="product container-b">
             <div class="product-images">
                 <div class="product-img-gallery">
-                    <div class="product-img-selector">
-                        <div class="product-select">
-                            <img src="src/img/Pedigree.png" alt="">
-                        </div>
-                        <div class="product-select">
-                            <img src="src/img/Pedigree2.png" alt="">
-                        </div>
-                        <div class="product-select">
-                            <img src="src/img/Pedigree3.png" alt="">
-                        </div>
-                        <div class="product-select">
-                            <img src="src/img/Pedigree4.png" alt="">
+                    <div thumbsSlider="" class="swiper mySwiper product-img-selector">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="src/img/Pedigree.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="src/img/Pedigree2.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="src/img/Pedigree3.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="src/img/Pedigree4.png" alt="">
+                            </div>
                         </div>
                     </div>
-                    <div class="product-main-img">
-                        <img src="src/img/Pedigree.png" alt="">
+                    <div class="swiper mySwiper2 product-main-img">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="src/img/Pedigree.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="src/img/Pedigree2.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="src/img/Pedigree3.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="src/img/Pedigree4.png" alt="">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -344,6 +361,8 @@
                 </div>
             </div>
         </div>
+
+
     </main>
 
     <footer>
@@ -408,6 +427,7 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="src/js/main.js"></script>
 </body>
 

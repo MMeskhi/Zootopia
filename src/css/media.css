@@ -58,6 +58,14 @@
         margin-right: 10px;
     }
 
+    #product .mySwiper {
+        margin-right: auto;
+    }
+
+    #product .mySwiper2 .swiper-wrapper {
+        width: 100% !important;
+    }
+
     .product .wgt {
         grid-template-columns: repeat(2, 2fr);
     }
@@ -106,7 +114,7 @@
         margin-bottom: 10px;
     }
 
-    .medium-card button {
+    .medium-card a {
         margin-top: 15px;
     }
 
@@ -172,7 +180,7 @@
         padding-top: 80px;
     }
 
-    .bg-cont button {
+    .bg-cont a {
         margin-top: 30px;
     }
 
@@ -388,5 +396,20 @@
 
     .product-listing-cont {
         margin-top: 140px;
+    }
+
+    .product .description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #product .product-main-img .swiper-slide img {
+        height: 300px;
+    }
+
+    #product .mySwiper .swiper-slide {
+        width: 75px !important;
     }
 }
