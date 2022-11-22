@@ -56,16 +56,20 @@ header {
     margin: 0 auto;
 }
 
-.navbar .logo {
-    height: 30px;
+.navbar .logo img {
     width: 212px;
-    margin-bottom: 15px;
+    height: 30px;
 }
 
 .srch-cart-login {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.srch-cart-login img {
+    width: 18px;
+    height: 18px;
 }
 
 .srch a, .cart a, .login a {
@@ -441,6 +445,11 @@ header {
     justify-content: space-between;
     width: 100%;
     margin-bottom: 15px;
+}
+
+.menu-mobile-active a li img {
+    width: 7px;
+    height: 20px;
 }
 
 hr {
@@ -1311,10 +1320,6 @@ hr {
 .brands .swiper-slide:hover {
     box-shadow: 0px 0px 60px #597dbc23;
     cursor: pointer;
-}
-
-.brands .swiper-slide img {
-    width: 96px;
 }
 
 .brands .swiper-slide img {
